@@ -20,3 +20,17 @@ $rows = $conn -> query("select title form post");
 while($row =$rows->fetch()){
     echo $row['title']."<br>";
 }
+
+while($row =$rows->fetch(PDO::FETCH_NUM)){
+    var_dump($row);
+    echo $row-> $row;
+}
+// PDO::FETCH_NUM returns enumerated array 
+// PDO::FETCH_ASSOC returns associative array
+// PDO::FETCH_BOTH - both of the above 
+// PDO::FETCH_OBJ returns object 
+// PDO::FETCH_LAZY allows all three (numeric associative and object) methots without memory overhead
+
+foreach($rows as $row){
+    echo $row['body'] . "<br>";
+}
