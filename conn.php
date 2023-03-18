@@ -31,6 +31,7 @@ while($row =$rows->fetch(PDO::FETCH_NUM)){
 // PDO::FETCH_OBJ returns object 
 // PDO::FETCH_LAZY allows all three (numeric associative and object) methots without memory overhead
 
+//itera todas las variables de la consulta y las saca
 foreach($rows as $row){
     echo $row['body'] . "<br>";
 }
